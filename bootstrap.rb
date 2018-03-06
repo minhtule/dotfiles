@@ -208,7 +208,7 @@ end
 
 def install_pip_dependencies
     run %{pip install -U pip setuptools virtualenv}
-    run %{pip install git-sweep pivotal_tools httpie}
+    run %{pip install git-sweep httpie ipython}
 end
 
 def install_android_sdk
