@@ -9,24 +9,15 @@
  * http://lesscss.org
  */
 
-
-/*
- * Examples
- * (To see them, uncomment and save)
- */
-
-// style the background color of the tree view
-.tree-view {
-  // background-color: whitesmoke;
+// Style the React component just as html tags.
+// Almost make it different from the keyword in Behave theme.
+.syntax--support.syntax--class,
+.syntax--entity.syntax--name.syntax--tag {
+  color: hsl(199, 63%, 72%);
 }
 
-// style the background and foreground colors on the atom-text-editor-element itself
-atom-text-editor {
-  // color: white;
-  // background-color: hsl(180, 24%, 12%);
-}
-
-// style UI elements inside atom-text-editor
-atom-text-editor .cursor {
-  // border-color: red;
+// Tag/JSX Component opening and closing arrow should have the same
+// color as other punctuation
+.syntax--meta.syntax--tag {
+  color: #D2D8E1;
 }
