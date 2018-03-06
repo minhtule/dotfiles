@@ -5,7 +5,7 @@ HashKnownHosts no
 #ConnectTimeout 2
 
 Host *
-    UseKeychain yes
+  UseKeychain yes
 
 Host *.amazonaws.com
   User root
