@@ -10,17 +10,11 @@ export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
 export PATH="$HOME/.nenv/bin:$HOME/.nenv/shims:$PATH" # Add NENV to PATH for scripting
 export PATH="$ZSH/bin:$PATH"
 
-export WORKSPACE="$HOME/workspace/"
-export GOPATH="$WORKSPACE/gopath/"
-
 export PATH="$PATH:$GOPATH/bin"
 
 # Fix PIP's annoying "ValueError: unknown locale: UTF-8"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-export ANDROID_HOME="/usr/local/opt/android-sdk"
-export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 
 # Local config
 [[ -f ~/.zshenv.local ]] && source ~/.zshenv.local

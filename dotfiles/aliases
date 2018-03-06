@@ -2,6 +2,8 @@
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias c='clear'
+alias rm='rm -i'
 
 alias tlf="tail -f"
 alias l='ls'
@@ -15,6 +17,9 @@ alias diff='colordiff -u'
 alias h='history'
 
 alias watch='watch '
+
+# My personal harddrive LOL
+alias samsung='open /Volumes/SAMSUNG'
 
 # Reloads ZSH
 alias reload='. ~/.zshrc'
@@ -46,9 +51,6 @@ alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias gitt='gittower .'
 alias gitsweep='git-sweep preview'
 alias gitsweepc='git-sweep cleanup'
-
-# Capistrano
-alias capd='cap deploy'
 
 # Rubygems
 alias gi="gem install"
