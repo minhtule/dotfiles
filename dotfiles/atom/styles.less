@@ -9,7 +9,19 @@
  * http://lesscss.org
  */
 
-// Style the React component just as html tags.
+// Strengthen the keywords to have a greate contrast against
+// the HTML/React component tags.
+.syntax--entity.syntax--name.syntax--tag.syntax--css,
+.syntax--keyword,
+.syntax--meta.syntax--tag,
+.syntax--storage,
+.syntax--storage.syntax--type,
+.syntax--variable.syntax--language.syntax--super,
+.syntax--variable.syntax--language.syntax--this {
+  color: hsl(199, 93%, 52%);
+}
+
+// Style the React component just as HTML tags.
 // Almost make it different from the keyword in Behave theme.
 .syntax--support.syntax--class,
 .syntax--entity.syntax--name.syntax--tag {
