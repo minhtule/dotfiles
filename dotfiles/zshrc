@@ -78,6 +78,9 @@ EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
+
 # The next line updates PATH for the Google Cloud SDK.
 source '/Users/minhtule/Applications/google-cloud-sdk/path.zsh.inc'
 
