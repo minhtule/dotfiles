@@ -2,6 +2,7 @@ packages: [
   "atom-beautify"
   "file-icons"
   "tabs-to-spaces"
+  "highlight-selected"
 
   # Colors
   "pigments"
