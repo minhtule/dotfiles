@@ -16,6 +16,28 @@ function sexy_dir {
   echo "$base_dir/$base_folder";
 }
 
+# Cache the default version because `rvm list` is kind of slow. 
+# Also strip off newline characters.
+export RVM_RUBY_DEFAULT_VERSION=`echo $(~/.rvm/bin/rvm list default string) | tr -d "\n"`
+
+function my_rvm_propmt_info() {
+  [ -f $HOME/.rvm/bin/rvm-prompt ] || return 1
+
+  if [[ ! -z $rvm_ruby_string && $rvm_ruby_string != $RVM_RUBY_DEFAULT_VERSION ]]; then
+    ruby_version=$rvm_ruby_string
+  else
+    ruby_version=''
+  fi
+
+  gemset_version=$(~/.rvm/bin/rvm-prompt g)
+  info=$ruby_version$gemset_version
+  if [ ! -z $info ]; then
+    info="($info) "
+  fi
+
+  echo $info
+}
+
 ZSH_THEME_GIT_PROMPT_PREFIX="["
 ZSH_THEME_GIT_PROMPT_SUFFIX="]%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%}"
