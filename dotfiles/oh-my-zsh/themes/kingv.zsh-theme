@@ -20,9 +20,10 @@ function sexy_dir {
 # Also strip off newline characters.
 export RVM_RUBY_DEFAULT_VERSION=`echo $(~/.rvm/bin/rvm list default string) | tr -d "\n"`
 
-function my_rvm_propmt_info() {
+function rvm_propmt_info() {
   [ -f $HOME/.rvm/bin/rvm-prompt ] || return 1
 
+  # `$rvm_ruby_string` is set by rvm in ENV vars.
   if [[ ! -z $rvm_ruby_string && $rvm_ruby_string != $RVM_RUBY_DEFAULT_VERSION ]]; then
     ruby_version=$rvm_ruby_string
   else
