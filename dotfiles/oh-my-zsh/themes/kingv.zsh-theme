@@ -1,5 +1,5 @@
 local ret_status="%(?::%{$fg[yellow]%}✗ %s)"
-PROMPT='$(my_rvm_propmt_info)${ret_status}%{$fg[green]%}$(sexy_dir)$(git_prompt_info) %{$fg[red]%}\$ %{$reset_color%}'   
+PROMPT='$(rvm_propmt_info)${ret_status}%{$fg[green]%}$(sexy_dir)$(parse_git_dirty)$(git_prompt_info) %{$fg[red]%}\$ %{$reset_color%}'   
 
 function sexy_dir {
   full_dir=`pwd | sed -e "s:$HOME:~:"`;
@@ -39,7 +39,7 @@ function rvm_propmt_info() {
   echo $info
 }
 
-ZSH_THEME_GIT_PROMPT_PREFIX="["
+ZSH_THEME_GIT_PROMPT_PREFIX=" ["
 ZSH_THEME_GIT_PROMPT_SUFFIX="]%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%}"
