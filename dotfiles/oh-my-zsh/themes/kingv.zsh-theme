@@ -1,5 +1,5 @@
 local ret_status="%(?::%{$fg[yellow]%}✗ %s)"
-PROMPT='${ret_status}%{$fg[green]%}$(sexy_dir)$(git_prompt_info) %{$fg[red]%}\$ %{$reset_color%}'   
+PROMPT='$(my_rvm_propmt_info)${ret_status}%{$fg[green]%}$(sexy_dir)$(git_prompt_info) %{$fg[red]%}\$ %{$reset_color%}'   
 
 function sexy_dir {
   full_dir=`pwd | sed -e "s:$HOME:~:"`;
