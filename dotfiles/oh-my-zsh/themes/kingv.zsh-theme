@@ -16,15 +16,6 @@ function sexy_dir {
   echo "$base_dir/$base_folder";
 }
 
-function git_prompt_info() {
-  local ref
-  if [[ "$(git config --get oh-my-zsh.hide-status 2> /dev/null)" != "1" ]]; then
-    ref=$(git symbolic-ref HEAD 2> /dev/null) || \
-    ref=$(git rev-parse --short HEAD 2> /dev/null) || return 0
-    echo " $(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
-  fi
-}
-
 ZSH_THEME_GIT_PROMPT_PREFIX="["
 ZSH_THEME_GIT_PROMPT_SUFFIX="]%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%}"
