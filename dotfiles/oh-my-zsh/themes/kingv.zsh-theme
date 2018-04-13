@@ -1,5 +1,5 @@
 local ret_status="%(?::%{$fg[yellow]%}✗ %s)"
-PROMPT='$(rvm_propmt_info)${ret_status}%{$fg[green]%}$(sexy_dir)$(parse_git_dirty)$(git_prompt_info) %{$fg[red]%}\$ %{$reset_color%}'   
+PROMPT='$(rvm_propmt_info)$(nvm_prompt_info)${ret_status}%{$fg[green]%}$(sexy_dir)$(parse_git_dirty)$(git_prompt_info) %{$fg[red]%}\$ %{$reset_color%}'
 
 function sexy_dir {
   full_dir=`pwd | sed -e "s:$HOME:~:"`;
@@ -16,7 +16,7 @@ function sexy_dir {
   echo "$base_dir/$base_folder";
 }
 
-# Cache the default version because `rvm list` is kind of slow. 
+# Cache the default version because `rvm list` is kind of slow.
 # Also strip off newline characters.
 export RVM_RUBY_DEFAULT_VERSION=`echo $(~/.rvm/bin/rvm list default string) | tr -d "\n"`
 
@@ -37,6 +37,23 @@ function rvm_propmt_info() {
   fi
 
   echo $info
+}
+
+function nvm_prompt_info() {
+  # Check if nvm is installed
+  [[ -f "$NVM_DIR/nvm.sh" ]] || return
+
+  local nvm_prompt
+  nvm_prompt=$(node -v 2>/dev/null)
+  [ -z $nvm_prompt ] && return
+
+  # If it is using the default version, do not display the prompt
+  default_version=$(nvm version node)
+  [[ $nvm_prompt == $default_version ]] && return
+
+  # Strip the "v" prefix
+  nvm_prompt=${nvm_prompt:1}
+  echo "⬡ ${nvm_prompt} "
 }
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" ["

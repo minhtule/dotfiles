@@ -31,9 +31,9 @@ def install
     install_pip_dependencies()
 
     puts "======================================================"
-    puts "Installing nenv"
+    puts "Installing nvm"
     puts "======================================================"
-    # install_nenv()
+    # install_nvm()
 
     puts "======================================================"
     puts "Installing Android SDK"
@@ -231,17 +231,15 @@ def install_atom_packages
   run %{apm install seti-ui editorconfig todo-show pigments atom-beautify prettier-atom highlight-selected sort-lines toggle-quotes color-picker linter linter-ui-default linter-eslint}
 end
 
-def install_nenv
-    nenv_path = File.expand_path('~/.nenv')
-    if !Dir.exists?(nenv_path)
-        run %{git clone https://github.com/ryuone/nenv.git ~/.nenv}
+def install_nvm
+    nvm_path = File.expand_path('~/.nvm')
+    if !Dir.exists?(nvm_path)
+        run %{git clone https://github.com/creationix/nvm.git ~/.nvm}
+        run %{cd ~/.nvm | git checkout v0.33.8}  # Check out the latest stable version
     end
-    run %{export PATH=$PATH:~/.nenv}  # just to make sure
-    run %{nenv rehash}
-    puts "Installing NodeJS 7.4.0"
-    run %{nenv install 7.10.0}
-    puts "Installing NodeJS 6.9.4"
-    run %{nenv install 6.9.4}
+
+    # Install latest node, only after the .zshrc is updated
+    # run %{nvm install node}
 end
 
 install
