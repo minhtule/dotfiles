@@ -47,9 +47,9 @@ function nvm_prompt_info() {
   nvm_prompt=$(node -v 2>/dev/null)
   [ -z $nvm_prompt ] && return
 
-  # If it is using the default version, do not display the prompt
-  default_version=$(nvm version node)
-  [[ $nvm_prompt == $default_version ]] && return
+  # If it is using the default version, do not display the prompt.
+  # The default version should be exported in .zshrc.
+  [[ $nvm_prompt == $NVM_NODE_DEFAULT_VERSION ]] && return
 
   # Strip the "v" prefix
   nvm_prompt=${nvm_prompt:1}

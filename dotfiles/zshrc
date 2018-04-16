@@ -98,7 +98,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-#
+# Export the default version in env, so the `nvm_prompt_info` can use it.
+export NVM_NODE_DEFAULT_VERSION=`nvm version node`
+
+# If there is .nvmrc in the current directory, automatically load the
+# specified node version.
 autoload -U add-zsh-hook
 load-nvmrc() {
   local node_version="$(nvm version)"
