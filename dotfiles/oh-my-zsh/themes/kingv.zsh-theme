@@ -16,7 +16,7 @@ function sexy_dir {
   echo "$base_dir/$base_folder";
 }
 
-# Cache the default rvm version because `rvm list` is kind of slow.
+# Cache the default version because `rvm list` is kind of slow.
 # Also strip off newline characters.
 export RVM_RUBY_DEFAULT_VERSION=`echo $(~/.rvm/bin/rvm list default string) | tr -d "\n"`
 
@@ -39,9 +39,6 @@ function rvm_propmt_info() {
   echo $info
 }
 
-# Cache the default nvm version because `nvm version node` is kind of slow.
-export NVM_NODE_DEFAULT_VERSION=`nvm version node`
-
 function nvm_prompt_info() {
   # Check if nvm is installed
   [[ -f "$NVM_DIR/nvm.sh" ]] || return
@@ -51,7 +48,8 @@ function nvm_prompt_info() {
   [ -z $nvm_prompt ] && return
 
   # If it is using the default version, do not display the prompt
-  [[ $nvm_prompt == $NVM_NODE_DEFAULT_VERSION ]] && return
+  default_version=$(nvm version node)
+  [[ $nvm_prompt == $default_version ]] && return
 
   # Strip the "v" prefix
   nvm_prompt=${nvm_prompt:1}
