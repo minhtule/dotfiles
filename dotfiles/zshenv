@@ -19,3 +19,6 @@ export LANG=en_US.UTF-8
 
 # Local config
 [[ -f ~/.zshenv.local ]] && source ~/.zshenv.local
+
+# virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvwrapper
