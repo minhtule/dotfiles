@@ -125,3 +125,5 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 # End of setup for nvm
 #######################################
+
+export use_java8='export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home'
