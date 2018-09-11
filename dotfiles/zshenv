@@ -13,6 +13,9 @@ export PATH="$ZSH/bin:$PATH"
 # Python 2 via brew
 export PATH="/usr/local/opt/python@2/bin:$PATH"
 
+# Python 3 via brew
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
 # Fix PIP's annoying "ValueError: unknown locale: UTF-8"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
