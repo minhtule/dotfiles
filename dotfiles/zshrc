@@ -47,8 +47,9 @@ ZSH_THEME="kingv"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(brew git rvm z virtualenvwrapper docker)
 
+
 # User configuration
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # Set default editor to be vim
 EDITOR='vim'
@@ -124,3 +125,6 @@ load-nvmrc
 #######################################
 
 alias use_java8="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home"
+
+# Finally, load the custom theme making sure all the environments are set up correctly.
+source $ZSH/oh-my-zsh.sh
