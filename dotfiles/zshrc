@@ -128,3 +128,7 @@ alias use_java8="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162
 
 # Finally, load the custom theme making sure all the environments are set up correctly.
 source $ZSH/oh-my-zsh.sh
+
+# Python 3 via brew
+# Make sure the default `python` is using Python 3
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
