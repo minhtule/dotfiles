@@ -12,6 +12,9 @@ export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
 export PATH="$HOME/.nenv/bin:$HOME/.nenv/shims:$PATH" # Add NENV to PATH for scripting
 export PATH="$ZSH/bin:$PATH"
 
+# Android studio
+export PATH="$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/platform-tools:$PATH"
+
 # Python 2 via brew
 export PATH="/usr/local/opt/python@2/bin:$PATH"
 
@@ -27,4 +30,3 @@ export WORKON_HOME=$HOME/.virtualenvwrapper
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
