@@ -9,7 +9,6 @@ export EDITOR=vim
 # I should fix it >.<
 export PATH="$HOME/.bin:/usr/local/sbin:$PATH"
 export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
-export PATH="$HOME/.nenv/bin:$HOME/.nenv/shims:$PATH" # Add NENV to PATH for scripting
 export PATH="$ZSH/bin:$PATH"
 
 # Android studio
