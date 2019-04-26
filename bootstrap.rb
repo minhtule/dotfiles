@@ -90,8 +90,4 @@ def process_file(f, target_filename)
     end
 end
 
-def zsh_installed?
-    File.exist?(File.join(ENV['HOME'], ".oh-my-zsh"))
-end
-
 install
