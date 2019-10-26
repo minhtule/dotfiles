@@ -25,3 +25,7 @@ export LANG=en_US.UTF-8
 
 # virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvwrapper
+
+# Pipenv
+# Keep the virtualenv .venv folder inside the project dir
+export PIPENV_VENV_IN_PROJECT=1
