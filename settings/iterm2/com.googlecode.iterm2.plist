@@ -251,7 +251,7 @@
 			<key>Background Color</key>
 			<dict>
 				<key>Alpha Component</key>
-				<real>0.5</real>
+				<real>0.94999999999999996</real>
 				<key>Blue Component</key>
 				<real>0.21176470816135406</real>
 				<key>Color Space</key>
@@ -442,6 +442,12 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>NSColorPanelMode</key>
+	<string>1</string>
+	<key>NSColorPickerPreferredRGBEntryMode</key>
+	<integer>2</integer>
+	<key>NSColorPickerSlidersDefaults</key>
+	<string>1</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/projects/personal/dotfiles/settings/iterm2</string>
 	<key>NSNavLastUserSetHideExtensionButtonState</key>
@@ -462,8 +468,8 @@
 	<false/>
 	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
 	<array>
-		<string>0.000000, 0.000000, 224.000000, 222.000000, NO, NO</string>
-		<string>0.000000, 223.000000, 224.000000, 48.000000, NO, NO</string>
+		<string>0.000000, 0.000000, 228.000000, 267.000000, NO, NO</string>
+		<string>0.000000, 268.000000, 228.000000, 43.000000, NO, NO</string>
 	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
@@ -494,13 +500,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>2629 723 224 239 2560 390 1680 1027 </string>
+	<string>2629 570 228 284 2560 390 1680 1027 </string>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>3000 824 799 448 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>3090 866 620 392 2560 390 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2690 527 970 707 2560 390 1680 1027 </string>
+	<string>2905 599 970 707 2560 390 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2560 710 970 707 2560 390 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -1456,7 +1462,7 @@
 			<key>Background Color</key>
 			<dict>
 				<key>Alpha Component</key>
-				<real>0.5</real>
+				<real>0.94999999999999996</real>
 				<key>Blue Component</key>
 				<real>0.21176470816135406</real>
 				<key>Color Space</key>
@@ -2229,7 +2235,7 @@
 			<key>Thin Strokes</key>
 			<integer>3</integer>
 			<key>Transparency</key>
-			<real>0.050000000000000003</real>
+			<real>0.05</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -2294,12 +2300,12 @@
 		<key>screenFrame</key>
 		<string>{{2560, 390}, {1680, 1050}}</string>
 		<key>topLeft</key>
-		<string>{2992, 1082}</string>
+		<string>{3105, 1112}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>FF20EF2A-5E4D-431D-807A-C6A7E750AC9F</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>76</integer>
+	<integer>90</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
